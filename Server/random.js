@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 
 let random = Math.floor(Math.random() * 100) +1
 
-let tries = 6
+let tries = 5
 
 console.log("Guess the random number bich boi: ");
     
