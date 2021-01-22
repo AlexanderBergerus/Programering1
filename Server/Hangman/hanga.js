@@ -48,7 +48,8 @@ rl.on("line", (input) => {
 
     }
     if (progress.join("") === randomWords) {
-        console.log("du vann!");
+        console.log("du vann! Ordet var " + randomWords);
+        
         process.exit()
     }
     
