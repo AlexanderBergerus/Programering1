@@ -4,10 +4,17 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-const wordlist = ["apa", "baka", "banan", "arnold", "sverige"];
+function info() {
+    console.log("Välkommen till hänga gubbe!")
+    console.log("Du ska gissa på ett slumpat ord,")
+    console.log("Men du har bara 7 försök på dig innan gubben blir hallal")
+    console.log("Du får endast gissa en liten bokstav i taget")
+    console.log("Var inte sämst :)")}
+
+const wordlist = ["wolfenstein", "seanbanan", "arnold", "sverige", "iridociclytis"];
 
 var randomWords = wordlist[Math.floor(Math.random() * wordlist.length)]
-console.log(randomWords);
+
 
 var tries = 7;
 
@@ -16,7 +23,7 @@ const progress = []
 for (let i = 0; i < randomWords.length; i++) {
     progress.push ("*");
 }
-
+info()
 rl.on("line", (input) => {
 
     var inCorrect = true
@@ -26,7 +33,7 @@ rl.on("line", (input) => {
             console.log("du gissade rätt");
             inCorrect = false;
             progress[i] = randomWords[i];
-            console.log(progress[i]);
+            
         }
     }
    
